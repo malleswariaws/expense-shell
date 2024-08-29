@@ -41,7 +41,7 @@ VALIDATE $? "Starting MYSQL Server"
 
 #Below code will be useful for idempotent nature
 mysql -h db.malleswariaws.online -uroot -pExpenseApp@1 -e 'show databases;' &>>$LOGFILE
-if [ $? -ne o ]
+if [ $? -ne 0 ]
 then
     mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$LOGFILE
     VALIDATE $? "MYSQL Root Setup"
