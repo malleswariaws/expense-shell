@@ -33,9 +33,6 @@ VALIDATE $? "Disabling default nodejs"
 dnf module enable nodejs:20 -y &>>$LOGFILE
 VALIDATE $? "Enabling nodejs:20 version"
 
-useradd expense
-VALIDATE $? "Creating expense user"
-
 dnf install nodejs -y &>>$LOGFILE
 VALIDATE $? "Installing nodejs"
 
