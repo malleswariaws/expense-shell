@@ -80,4 +80,4 @@ mysql -h db.malleswariaws.online -uroot -p${mysql_root_password} < /app/schema/b
 VALIDATE $? "Schema loading" 
 
 systemctl restart backend &>>$LOGFILE
-VALIDATE $? "Restating Backend
+VALIDATE $? "Restating Backend"
